@@ -1,7 +1,7 @@
 import React from 'react';
 import Board from '../components/Board';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   render() {
     return (
       <div className="game">
