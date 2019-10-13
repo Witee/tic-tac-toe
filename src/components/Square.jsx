@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 
-const Square = () => (
-  <button type="button" className="square">
-    {/* TODO */}
+const Square = ({ value, onClick }) => (
+  <button type="button" className="square" onClick={onClick}>
+    {value}
   </button>
 );
 
-export default Square;
+Square.propTypes = {
+  value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default memo(Square);
